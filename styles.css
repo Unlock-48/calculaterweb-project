@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgb(77, 255, 0);
+}
+
+#display {
+    width: 95%;
+    height: 50px;
+    background-color: #000000;
+    color: rgb(77, 255, 0);;
+    border: none;
+    text-align: right;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #000000;
+    color: rgb(77, 255, 0);;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 20px; /* ทำให้ปุ่มมนมากขึ้น */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ปุ่ม */
+}
+
+/* เมื่อปุ่มถูก hover */
+button:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px); /* เลื่อนปุ่มขึ้นเล็กน้อย */
+    box-shadow: 5px 5px 10px #461801(50, 50, 0); /* เพิ่มเงาเมื่อ hover */
+}
+
+/* เมื่อปุ่มถูกกด */
+button:active {
+    transform: translateY(0); /* ปุ่มกลับมาที่ตำแหน่งเดิม */
+    box-shadow: 2px 2px 5px rgb(77, 255, 0); /* ลดเงาเมื่อกด */
+}
+
+button.equals {
+    grid-column: span 2;
+    background-color: #000000;
+}
+
+button.equals:hover {
+    background-color: #ffffff;
+}
+
+button.icon:hover{
+    background-color: #ffffff;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.pictitle {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
